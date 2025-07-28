@@ -1,0 +1,16 @@
+app = "proflonbot"
+
+[build]
+
+[env]
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+[deploy]
+  release_command = "python3 main.py"
